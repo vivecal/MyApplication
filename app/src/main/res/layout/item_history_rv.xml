@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="2dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:id="@+id/tvNickName"
+            style="@style/SubDataStyle"
+            android:visibility="gone"
+            tools:text="coco" />
+        <TextView
+            android:id="@+id/tvDataAfter"
+            style="@style/SubDataStyle"
+            tools:text="12.24" />
+        <TextView
+            android:id="@+id/tvDataBefore"
+            style="@style/SubDataStyle"
+            tools:text="2500" />
+        <TextView
+            android:id="@+id/tvDataDetail"
+            style="@style/SubDataStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:lineSpacingExtra="2dp"
+            tools:text="1000+2000+5000+700+3000+5000+700" />
+    </LinearLayout>
+</RelativeLayout>

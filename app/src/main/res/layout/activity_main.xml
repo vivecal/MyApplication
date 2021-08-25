@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/title_bar_layout" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/llSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <TextView
+            style="@style/SubTitleStyle"
+            android:visibility="gone"
+            android:text="昵称" />
+        <TextView
+            style="@style/SubTitleStyle"
+            android:text="折算后" />
+        <TextView
+            style="@style/SubTitleStyle"
+            android:text="折算前" />
+        <TextView
+            style="@style/SubTitleStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="明细" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSubData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvNickName"
+            style="@style/SubDataStyle"
+            android:visibility="gone"
+            tools:text="coco" />
+        <TextView
+            android:id="@+id/tvDataAfter"
+            style="@style/SubDataStyle"
+            tools:text="12.24" />
+        <TextView
+            android:id="@+id/tvDataBefore"
+            style="@style/SubDataStyle"
+            tools:text="2500" />
+        <TextView
+            android:id="@+id/tvDataDetail"
+            style="@style/SubDataStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:lineSpacingExtra="2dp"
+            tools:text="700000+2000+3000+5000+7002" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvCalculateResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="70dp"
+        android:gravity="top"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@null"
+        android:textColor="@color/red"
+        android:textSize="25sp"
+        tools:text="1500+2000+1500+2000+1500+2000+1500+2000" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/number7"
+                style="@style/calculateBtnStyle"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/number8"
+                style="@style/calculateBtnStyle"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/number9"
+                style="@style/calculateBtnStyle"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/number4"
+                style="@style/calculateBtnStyle"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/number5"
+                style="@style/calculateBtnStyle"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/number6"
+                style="@style/calculateBtnStyle"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/number1"
+                style="@style/calculateBtnStyle"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/number2"
+                style="@style/calculateBtnStyle"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/number3"
+                style="@style/calculateBtnStyle"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/dot"
+                style="@style/calculateBtnStyle"
+                android:textSize="25sp"
+                android:text="." />
+
+            <Button
+                android:id="@+id/number0"
+                style="@style/calculateBtnStyle"
+                android:text="0" />
+
+            <ImageView
+                android:id="@+id/btnBackspace"
+                style="@style/calculateBtnStyle"
+                android:scaleType="center"
+                android:src="@drawable/ic_backspace" />
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/gridLayout"
+            app:layout_constraintTop_toTopOf="@+id/gridLayout">
+
+            <Button
+                android:id="@+id/btnMultiplication"
+                style="@style/calculateBtnStyle"
+                android:textSize="23sp"
+                android:text="x" />
+
+            <Button
+                android:id="@+id/btnPlus"
+                style="@style/calculateBtnStyle"
+                android:textSize="25sp"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/btnEnter"
+                style="@style/calculateVerBtnStyle"
+                android:text="结束" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

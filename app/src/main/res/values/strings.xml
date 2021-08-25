@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">小算盘</string>
+    <string name="cancel">取消</string>
+    <string name="et_hint_nickname">点击输入买家昵称</string>
+    <string name="activity_title_history">历史记录</string>
+    <string name="activity_title_freight">计算结果</string>
+    <string name="activity_title_fund_cal">算涨跌</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

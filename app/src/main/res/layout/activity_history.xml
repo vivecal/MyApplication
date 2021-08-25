@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/title_bar_layout" />
+
+    <LinearLayout
+        android:id="@+id/llSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <TextView
+            style="@style/SubTitleStyle"
+            android:visibility="gone"
+            android:text="昵称" />
+        <TextView
+            style="@style/SubTitleStyle"
+            android:text="折算后" />
+        <TextView
+            style="@style/SubTitleStyle"
+            android:text="折算前" />
+        <TextView
+            style="@style/SubTitleStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="明细" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/historyRv"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+</LinearLayout>
